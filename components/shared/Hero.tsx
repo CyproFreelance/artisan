@@ -46,17 +46,17 @@ const HeroSection = () => {
 
   return (
     <motion.section
-      className="flex flex-col w-full items-start justify-center h-[100vh] py-12 px-4 sm:px-6 lg:px-8"
+      className="flex flex-col absolute w-full items-start justify-center h-[100vh] py-12 px-16"
       initial="hidden"
       animate={controls}
       variants={staggerVariants}
     >
-      <h2 className="text-9xl tracking-tight leading-none text-white">
+      <h2 className="text-6xl tracking-tight leading-none text-white lg:text-9xl md:text-8xl sm:text-7xl transition-all">
         <motion.span variants={charVariants}>We</motion.span>
         {' '}
         <motion.span variants={charVariants}>are</motion.span>
         <br />
-        <motion.span className='font-light italic' variants={charVariants}>Artisan's</motion.span>
+        <motion.span className='font-light italic' variants={charVariants}>Artisan&apos;s</motion.span>
         {' '}
         <motion.span variants={charVariants}>Bijou</motion.span>
         <br />
