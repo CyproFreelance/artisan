@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <>
-      <Cursor />
+      {/* <Cursor /> */}
     <main className="bg-zinc-950 text-white flex h-screen flex-col">
       <Navbar/>
       <HeroSection/>
