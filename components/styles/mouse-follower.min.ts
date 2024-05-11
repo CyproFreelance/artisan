@@ -330,9 +330,23 @@ class MouseFollower {
 
     setStick(t: string | HTMLElement) {
         let e = typeof t === "string" ? document.querySelector(t) : t;
+        if (!e) {
+            console.error("Element is null.");
+            return;
+        }
         let bounds = e.getBoundingClientRect();
+        if (!bounds) {
+            console.error("Bounding client rect is null.");
+            return;
+        }
+        if (isNaN(bounds.top) || isNaN(bounds.left) || isNaN(bounds.width) || isNaN(bounds.height)) {
+            console.error("Bounding client rect properties are NaN.");
+            return;
+        }
         this.stick = { y: bounds.top + bounds.height / 2, x: bounds.left + bounds.width / 2 };
     }
+    
+    
 
     removeStick() {
         this.stick = null;

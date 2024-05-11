@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import MouseFollower from 'mouse-follower';
 import gsap from 'gsap';
 import '../styles/mouse-follower.min.css';
-import '../styles/mouse-follower.min.ts'
+import '@/components/styles/mouse-follower.min'
 
 const Cursor = () => {
   useEffect(() => {
@@ -45,6 +45,13 @@ const Cursor = () => {
         hideOnLeave: true,
         hideTimeout: 300,
     });
+
+    const isMobile = window.innerWidth < 1000;
+
+    if (isMobile) {
+      cursor.hide();
+    }
+
     return () => {
       cursor.destroy(); // Clean up when component unmounts
     };

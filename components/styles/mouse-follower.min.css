@@ -2,12 +2,13 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 250;
+	z-index: 9999;
 	direction: ltr;
 	contain: layout style size;
 	pointer-events: none;
     color: #fff;
 	transition: opacity 0.3s, color 0.4s;
+	mix-blend-mode: difference;
 }
 .mf-cursor:before {
 	content: "";
@@ -109,6 +110,7 @@
 	opacity: 0;
 	border-radius: 50%;
 	transition: transform 0.35s, opacity 0.2s 0.2s;
+
 }
 .mf-cursor.-media .mf-cursor-media-box {
 	opacity: 1;
