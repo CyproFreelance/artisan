@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import MouseFollower from 'mouse-follower';
 import gsap from 'gsap';
 import '../styles/mouse-follower.min.css';
-import '@/components/styles/mouse-follower.min'
+import '@/components/styles/mouse-follower.min.js'
 
 const Cursor = () => {
   useEffect(() => {

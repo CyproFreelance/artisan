@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className='w-full border-white h-28 flex items-center justify-between px-12 fixed z-[999]'>
+    <header className='w-full h-28 flex items-center justify-between px-12 fixed z-[999]'>
       <Image
         src={'/logo.svg'}
         alt=''
