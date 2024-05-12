@@ -1,8 +1,8 @@
 'use client'
 import {ReactLenis} from '@studio-freight/react-lenis'
 
-function SmoothScroll() {
-    return <ReactLenis root></ReactLenis>
+function SmoothScroll({children} :{children: React.ReactNode}) {
+    return <ReactLenis root>{children}</ReactLenis>
 }
 
 export default SmoothScroll;

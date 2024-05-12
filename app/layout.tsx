@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins as FontSans } from "next/font/google"
 import "./globals.css";
 import { cn } from "@/lib/utils"
+import SmoothScroll from "@/components/shared/SmoothScroll";
  
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -23,7 +24,11 @@ export default function RootLayout({
       <body className={cn(
           "min-h-screen bg-background font-sans antialiased",
           fontSans.variable
-        )}>{children}</body>
+        )}>
+          <SmoothScroll>
+            {children}
+          </SmoothScroll>
+        </body>
     </html>
   );
 }
